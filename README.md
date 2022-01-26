@@ -1,2 +1,2 @@
-# chowa566
-Typography &amp; Interaction class, MPS CD Spring Semester 2022
+# interaction
+Typography &amp; Interaction class with Tuan, MPS CD Spring Semester 2022
