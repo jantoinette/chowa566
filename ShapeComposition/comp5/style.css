@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  padding: 40px;
+  background-color: #eee;
+  font-family: sans-serif;
+  font-style: italic;
+}
+
+p, a {
+  text-align: center;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.outer {
+  width: 600px;
+  height: 600px;
+  background-color: thistle;
+  margin: 0 auto;
+  position: relative;
+}
+
+.tri {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.topleft{
+  border-top: 600px solid #eee;
+  border-right: 600px solid transparent;
+}
+
+.topleft-small {
+  border-top: 200px solid white;
+  border-right: 200px solid transparent;
+}
+
+.botright{
+  border-bottom: 200px solid #eee;
+  border-left: 200px solid transparent;
+  bottom: 120px;
+  right: 120px;
+}

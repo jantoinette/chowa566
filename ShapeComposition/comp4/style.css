@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  padding: 40px;
+  background-color: #eee;
+  font-family: sans-serif;
+}
+
+p, a {
+  text-align: center;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.outer {
+  width: 600px;
+  height: 600px;
+  background-color: white;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  position: relative;
+}
+
+.line {
+  width: 2px;
+  height: 100px;
+  background-color: black;
+  position: absolute;
+}

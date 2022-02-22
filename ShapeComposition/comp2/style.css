@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  padding: 40px;
+  background-color: #eee;
+  font-family: fantasy;
+}
+
+p, a {
+  text-align: center;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.grid {
+  width: 600px;
+  height: 600px;
+  background-color: black;
+  margin: 0 auto;
+}
+
+.squares {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 6px;
+}
+
+.items{
+  background-color: #eee;
+  padding: 6px;
+}
+
+
+/* padding 50% takes in also the text height, should I add another child div?*/
+.items p{
+  margin: 0;
+  padding: 14.75px 0;
+  font-size: 100px;
+}

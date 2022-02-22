@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 40px;
+  background-color: midnightblue;
+}
+
+p, a {
+  text-align: center;
+  display: block;
+  margin-bottom: 20px;
+}
+
+p {color: yellow;}
+a {color: white;}
+
+.outer {
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.moon{
+  width: 400px;
+  height: 400px;
+  background-color: lightsteelblue;
+  border-radius: 50%;
+  float: right;
+  margin-right: 10px;
+  position: relative;
+  top: 20px;
+}
+
+.star{
+  width: 20px;
+  height: 20px;
+  background-color: yellow;
+  border-radius: 50%;
+  position: absolute;
+}

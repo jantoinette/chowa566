@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 40px;
+  background-color: #eee;
+  font-family: sans-serif;
+}
+
+p, a {
+  text-align: center;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.outer {
+  width: 600px;
+  height: 600px;
+  background-color: lightpink;
+  margin: 0 auto;
+}
+
+.top {
+  background: linear-gradient(darkorange 0%, lightpink 80%);
+  height: 100px;
+}
+
+.column {
+  background-color: blue;
+  height: 300px;
+  width: 100px;
+  border-radius: 60px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.bottom {
+  background: radial-gradient(ellipse at bottom, #eee 20%, lime 90%);
+  height: 200px;
+  margin-top: 300px;
+}
