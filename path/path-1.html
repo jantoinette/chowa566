@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Path – 1: let's go</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥪</text></svg>">
+</head>
+
+<body>
+
+    <section class="container">
+
+        <div class="title"><h1>Let's go get a sandwich!</h1></div>
+
+        <div class="card">
+        	<img id="left1" style="display:block" src="images/img_1a.jpeg" alt="Old lady with headphones">
+            <img id="left2" style="display:none" src="images/img_2.jpeg" alt="Graffiti above trash bins">
+            <div id="left3" style="display:none" class="link">
+                <img src="images/img_3.jpeg" alt="Mattress on sidewalk">
+                <a class="link-text" href="https://forums.craigslist.org/?ID=304324695" target="_self"><p>best bet for a new mattress?</p></a>
+            </div>
+            <div id="left4" style="display:none;" class="link">
+                <a href="https://forums.craigslist.org/?ID=320850121" target="_self"><p>bet</p></a>
+            </div>
+        </div>
+
+    	<div class="card">
+            <img id="mid1" style="display:block" src="images/img_1b.jpeg" alt="Back of old couple walking in front">
+            <img id="mid2" style="display:none" src="images/img_2b.jpeg" alt="Words written on trash bin lids">
+            <div id="mid3" style="display:none" class="link">
+                <img src="images/img_3.jpeg" alt="Mattress on sidewalk">
+                <a class="link-text" href="https://forums.craigslist.org/?ID=304324695" target="_self"><p>best bet for a new mattress?</p></a>
+            </div>
+            <div id="mid4" style="display:none;" class="link">
+                <a href="https://forums.craigslist.org/?ID=320850121" target="_self"><p>bet</p></a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img id="right1" style="display:block" src="images/img_1c.jpeg" alt="Hole in back pocket">
+            <img id="right2" style="display:none" src="images/img_2.jpeg" alt="Graffiti above trash bins">
+            <div id="right3" style="display:none" class="link">
+                <img src="images/img_3.jpeg" alt="Mattress on sidewalk">
+                <a class="link-text" href="https://forums.craigslist.org/?ID=304324695" target="_self"><p>best bet for a new mattress?</p></a>
+            </div>
+            <div id="right4" style="display:none;" class="link">
+                <a href="https://forums.craigslist.org/?ID=320850121" target="_self"><p>bet</p></a>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+
+        var l = 1; var m = 1; var r = 1;
+        document.getElementById('left'+l).addEventListener('click',leftCard);
+        document.getElementById('mid'+m).addEventListener('click',midCard);
+        document.getElementById('right'+r).addEventListener('click',rightCard);
+        
+        function leftCard() {
+            document.getElementById('left'+l).style.display = 'none';
+            l++;
+            document.getElementById('left'+l).style.display = 'block';
+            document.getElementById('left'+l).addEventListener('click',leftCard);
+        }
+
+        function midCard() {
+            document.getElementById('mid'+m).style.display = 'none';
+            m++;
+            document.getElementById('mid'+m).style.display = 'block';
+            document.getElementById('mid'+m).addEventListener('click',midCard);
+        }
+
+        function rightCard() {
+            document.getElementById('right'+r).style.display = 'none';
+            r++;
+            document.getElementById('right'+r).style.display = 'block';
+            document.getElementById('right'+r).addEventListener('click',rightCard);
+        }
+
+    </script>
+
+
+</body>
+
+</html>

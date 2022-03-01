@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Path – 2: thru the park</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥪</text></svg>">
+</head>
+
+<body>
+
+    <section class="container">
+
+        <div class="title"><h1>Going through Tompkins Square Park</h1></div>
+
+        <div class="card">
+        	<img id="left4" style="display:block" src="images/img_4.jpeg" alt="Sidewalk where mattress used to be">
+            <img id="left5" style="display:none" src="images/img_5a.jpeg" alt="Girl walking two dalmatians across the street">
+            <div id="left6" style="display:none" class="link">
+                <img src="images/img_6.jpeg" alt="Tompkins Square Pool?">
+                <a class="link-text" href="https://obscure-park-pool.tumblr.com/" target="_self"><p>since when is this here?</p></a>
+            </div>
+            <div id="left7" style="display:none;" class="link">
+                <a href="https://obscure-park-pool.tumblr.com/" target="_self"><p>obscure-park-pool</p></a>
+            </div>
+        </div>
+
+    	<div class="card">
+            <img id="mid4" style="display:block" src="images/img_4.jpeg" alt="Sidewalk where mattress used to be">
+            <img id="mid5" style="display:none" src="images/img_5b.jpeg" alt="Girl walking two dalmatians">
+            <div id="mid6" style="display:none" class="link">
+                <img src="images/img_6.jpeg" alt="Tompkins Square Pool?">
+                <a class="link-text" href="https://obscure-park-pool.tumblr.com/" target="_self"><p>since when is this here?</p></a>
+            </div>
+            <div id="mid7" style="display:none;" class="link">
+                <a href="https://obscure-park-pool.tumblr.com/" target="_self"><p>obscure-park-pool</p></a>
+            </div>
+        </div>
+
+    	<div class="card">
+            <img id="right4" style="display:block" src="images/img_4.jpeg" alt="Sidewalk where mattress used to be">
+            <img id="right5" style="display:none" src="images/img_5c.jpeg" alt="Girl walking two dalmatians">
+            <div id="right6" style="display:none" class="link">
+                <img src="images/img_6.jpeg" alt="Tompkins Square Pool?">
+                <a class="link-text" href="https://obscure-park-pool.tumblr.com/" target="_self"><p>since when is this here?</p></a>
+            </div>
+            <div id="right7" style="display:none;" class="link">
+                <a href="https://obscure-park-pool.tumblr.com/" target="_self"><p>obscure-park-pool</p></a>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+
+        var l = 4; var m = 4; var r = 4;
+        document.getElementById('left'+l).addEventListener('click',leftCard);
+        document.getElementById('mid'+m).addEventListener('click',midCard);
+        document.getElementById('right'+r).addEventListener('click',rightCard);
+        
+        function leftCard() {
+            document.getElementById('left'+l).style.display = 'none';
+            l++;
+            document.getElementById('left'+l).style.display = 'block';
+            document.getElementById('left'+l).addEventListener('click',leftCard);
+        }
+
+        function midCard() {
+            document.getElementById('mid'+m).style.display = 'none';
+            m++;
+            document.getElementById('mid'+m).style.display = 'block';
+            document.getElementById('mid'+m).addEventListener('click',midCard);
+        }
+
+        function rightCard() {
+            document.getElementById('right'+r).style.display = 'none';
+            r++;
+            document.getElementById('right'+r).style.display = 'block';
+            document.getElementById('right'+r).addEventListener('click',rightCard);
+        }
+
+    </script>
+
+
+</body>
+
+</html>

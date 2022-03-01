@@ -1,0 +1,101 @@
+html {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+body {
+	height: 100%;
+	background-color: white;
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+a {color:darkgrey; text-decoration: none;}
+a:hover {color: black; font-style: italic; text-decoration: underline;}
+a:active {color:darkgrey; text-decoration: none;}
+
+.title {
+	position: absolute;
+	bottom: 88vh;
+	width: 90%;
+	text-align: center;
+}
+
+.container {
+	height: 100%;
+	width: 90%;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-content: center;
+}
+
+.card {
+	display: block;
+	position: relative;
+	width: 100%;
+	margin: auto;
+	padding: 20px;
+	/*align-content: center;*/
+}
+
+
+@media (max-width: 800px) {
+	.container {
+		flex-direction: column;
+		margin-top: 40px;
+	}
+	.item {
+		max-width: 100%;
+	}
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.link {
+	width: auto;
+	position: relative;
+	text-align: center;
+} & img {
+	display: block;
+}
+.link-text {
+	display: none;
+	width: 100%;
+	padding: 31% 0;
+	text-align: center;
+	background-color: rgba(255,255,255,0.8);
+	position: absolute;
+	top:0;
+	left:0;
+}
+/*.link:hover img {
+	display: none;
+}*/
+.link:hover .link-text {
+	display: block;
+}
+
+
+.end {
+	text-align: center;
+	color: lightgrey;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 2rem;
+}
+
+.restart {
+	display: none;
+	text-align: center;
+}
+
+.link:hover .end {display:none}
+.link:hover .restart {display: block;}
+

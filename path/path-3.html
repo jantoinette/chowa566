@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Path – 3: almost there!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥪</text></svg>">
+</head>
+
+<body>
+
+    <section class="container">
+
+        <div class="title"><h1>Are you excited?</h1></div>
+
+        <div class="card">
+            <img id="left7" style="display:block" src="images/img_7.jpeg" alt="Tompkins Square Pool is locked">
+            <img id="left8" style="display:none" src="images/img_8a.jpeg" alt="Two resident red-tailed hawks sitting on tree">
+            <div id="left9" style="display:none" class="link">
+                <img src="images/img_9.jpeg" alt="C&B food menu">
+                <a class="link-text" href="https://docs.google.com/forms/d/e/1FAIpQLSca396J0KVE-ThaR0ZtOMdU6AWFMm7sn55wexNBS8lNBUPlTw/viewform?usp=pp_url&entry.726002051=2022-02-07&entry.1839964803=11:57&entry.428391023=and&entry.428391023=going&entry.428391023=East&entry.150567627=keep&entry.150567627=East&entry.895609314=and&entry.895609314=keep&entry.895609314=going" target="_self"><p>time to order!</p></a>
+            </div>
+            <div id="left10" style="display:none;" class="link">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSca396J0KVE-ThaR0ZtOMdU6AWFMm7sn55wexNBS8lNBUPlTw/viewform?usp=pp_url&entry.726002051=2022-02-07&entry.1839964803=11:57&entry.428391023=and&entry.428391023=going&entry.428391023=East&entry.150567627=keep&entry.150567627=East&entry.895609314=and&entry.895609314=keep&entry.895609314=going" target="_self"><p>time to order!</p></a>
+            </div>
+    	</div>
+
+    	<div class="card">
+            <img id="mid7" style="display:block" src="images/img_7.jpeg" alt="Tompkins Square Pool is locked">
+            <img id="mid8" style="display:none" src="images/img_8b.jpeg" alt="Bluejay sitting on tree">
+            <div id="mid9" style="display:none" class="link">
+                <img src="images/img_9.jpeg" alt="C&B food menu">
+                <a class="link-text" href="https://docs.google.com/forms/d/e/1FAIpQLSca396J0KVE-ThaR0ZtOMdU6AWFMm7sn55wexNBS8lNBUPlTw/viewform?usp=pp_url&entry.726002051=2022-02-07&entry.1839964803=11:57&entry.428391023=and&entry.428391023=going&entry.428391023=East&entry.150567627=keep&entry.150567627=East&entry.895609314=and&entry.895609314=keep&entry.895609314=going" target="_self"><p>time to order!</p></a>
+            </div>
+            <div id="mid10" style="display:none;" class="link">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSca396J0KVE-ThaR0ZtOMdU6AWFMm7sn55wexNBS8lNBUPlTw/viewform?usp=pp_url&entry.726002051=2022-02-07&entry.1839964803=11:57&entry.428391023=and&entry.428391023=going&entry.428391023=East&entry.150567627=keep&entry.150567627=East&entry.895609314=and&entry.895609314=keep&entry.895609314=going" target="_self"><p>time to order!</p></a>
+            </div>
+        </div>
+
+    	<div class="card">
+            <img id="right7" style="display:block" src="images/img_7.jpeg" alt="Tompkins Square Pool is locked">
+            <img id="right8" style="display:none" src="images/img_8c.jpeg" alt="Empty trees">
+            <div id="right9" style="display:none" class="link">
+                <img src="images/img_9.jpeg" alt="C&B food menu">
+                <a class="link-text" href="https://docs.google.com/forms/d/e/1FAIpQLSca396J0KVE-ThaR0ZtOMdU6AWFMm7sn55wexNBS8lNBUPlTw/viewform?usp=pp_url&entry.726002051=2022-02-07&entry.1839964803=11:57&entry.428391023=and&entry.428391023=going&entry.428391023=East&entry.150567627=keep&entry.150567627=East&entry.895609314=and&entry.895609314=keep&entry.895609314=going" target="_self"><p>time to order!</p></a>
+            </div>
+            <div id="right10" style="display:none;" class="link">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSca396J0KVE-ThaR0ZtOMdU6AWFMm7sn55wexNBS8lNBUPlTw/viewform?usp=pp_url&entry.726002051=2022-02-07&entry.1839964803=11:57&entry.428391023=and&entry.428391023=going&entry.428391023=East&entry.150567627=keep&entry.150567627=East&entry.895609314=and&entry.895609314=keep&entry.895609314=going" target="_self"><p>time to order!</p></a>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+
+        var l = 7; var m = 7; var r = 7;
+        document.getElementById('left'+l).addEventListener('click',leftCard);
+        document.getElementById('mid'+m).addEventListener('click',midCard);
+        document.getElementById('right'+r).addEventListener('click',rightCard);
+        
+        function leftCard() {
+            document.getElementById('left'+l).style.display = 'none';
+            l++;
+            document.getElementById('left'+l).style.display = 'block';
+            document.getElementById('left'+l).addEventListener('click',leftCard);
+        }
+
+        function midCard() {
+            document.getElementById('mid'+m).style.display = 'none';
+            m++;
+            document.getElementById('mid'+m).style.display = 'block';
+            document.getElementById('mid'+m).addEventListener('click',midCard);
+        }
+
+        function rightCard() {
+            document.getElementById('right'+r).style.display = 'none';
+            r++;
+            document.getElementById('right'+r).style.display = 'block';
+            document.getElementById('right'+r).addEventListener('click',rightCard);
+        }
+
+    </script>
+
+
+</body>
+
+</html>

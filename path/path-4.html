@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Path – 4: going home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥪</text></svg>">
+</head>
+
+<body>
+
+    <section class="container">
+
+        <div class="title"><h1>It's goooooood !!</h1></div>
+
+        <div class="card">
+            <img id="left10" style="display:block" src="images/img_10.jpeg" alt="Old window display with tailor decal">
+            <img id="left11" style="display:none" src="images/img_11a.jpeg" alt="Eric Paulin Jazz Venmo and Cash App QR codes">
+            <div id="left12" style="display:none;" class="link">
+                <p class="end">thanks for coming!</p>
+                <p class="restart"><a href="path-1.html" target="_self">let's get another sandwich!</a></p>
+            </div>
+        </div>
+
+
+    	<div class="card">
+            <img id="mid10" style="display:block" src="images/img_10.jpeg" alt="Old window display with tailor decal">
+            <img id="mid11" style="display:none" src="images/img_11b.jpeg"  alt="Drummer on set busking in park">
+            <div id="mid12" style="display:none;" class="link">
+                <p class="end">thanks for coming!</p>
+                <p class="restart"><a href="path-1.html" target="_self">want another sandwich?</a></p>
+            </div>
+        </div>
+
+
+    	<div class="card">          
+            <img id="right10" style="display:block" src="images/img_10.jpeg" alt="Old window display with tailor decal">
+            <img id="right11" style="display:none" src="images/img_11c.jpeg" alt="Jazz band busking in park">
+            <div id="right12" style="display:none;" class="link">
+                <p class="end">thanks for coming!</p>
+                <p class="restart"><a href="path-1.html" target="_self">time for an afternoon snack!</a></p>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+
+        var l = 10; var m = 10; var r = 10;
+        document.getElementById('left'+l).addEventListener('click',leftCard);
+        document.getElementById('mid'+m).addEventListener('click',midCard);
+        document.getElementById('right'+r).addEventListener('click',rightCard);
+        
+        function leftCard() {
+            document.getElementById('left'+l).style.display = 'none';
+            l++;
+            if (l < 12) {
+                document.getElementById('left'+l).style.display = 'block';
+                document.getElementById('left'+l).addEventListener('click',leftCard);
+            } else {
+                document.getElementById('left12').style.display = 'block';
+
+                document.getElementById('mid'+m).style.display = 'none';
+                document.getElementById('mid12').style.display = 'block';
+
+                document.getElementById('right'+r).style.display = 'none';
+                document.getElementById('right12').style.display = 'block';
+            }
+        }
+
+        function midCard() {
+            document.getElementById('mid'+m).style.display = 'none';
+            m++;
+            if (m < 12) {
+                document.getElementById('mid'+m).style.display = 'block';
+                document.getElementById('mid'+m).addEventListener('click',midCard);
+            } else {
+                document.getElementById('mid'+m).style.display = 'block';
+
+                document.getElementById('left'+l).style.display = 'none';
+                document.getElementById('left12').style.display = 'block';
+
+                document.getElementById('right'+r).style.display = 'none';
+                document.getElementById('right12').style.display = 'block';
+            }
+        }
+
+        function rightCard() {
+            document.getElementById('right'+r).style.display = 'none';
+            r++;
+            if (r < 12) {
+                document.getElementById('right'+r).style.display = 'block';
+                document.getElementById('right'+r).addEventListener('click',rightCard);
+            } else {
+                document.getElementById('right'+r).style.display = 'block';
+
+                document.getElementById('left'+l).style.display = 'none';
+                document.getElementById('left12').style.display = 'block';
+
+                document.getElementById('mid'+m).style.display = 'none';
+                document.getElementById('mid12').style.display = 'block';
+            }
+        }
+
+    </script>
+
+
+</body>
+
+</html>
