@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="assets/reset.css" rel="stylesheet">
+		<link href="assets/style.css" rel="stylesheet">
+		<script src="assets/arena.js" type="text/javascript"></script>
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inter">
+		<link href="assets/index.png" rel="icon">
+		<title>COLORS</title>
+	</head>
+	<body>
+
+		<div class="header">
+			<div id="title" onmouseover="chbg('black')" onmouseout="chbk('black')"><a href="all.html"><h1 class="all">COLORS</h1></a></div>
+			<div id="title-line" class="line"></div>
+
+			<h1 id="channel-title"></h1>
+			<div id="channel-description"></div>
+			<div id="black"></div>
+		</div>
+		<div class="footer">
+			<div id="page">are.na</div>
+			<div id="add"><a href="https://www.are.na/krishangi-agarwal/krishangi-agarwal_archive" id="channel-url" target="_blank">+ add blocks</a></div>
+		</div>
+
+		<div class="nav">
+			<div class="nav-lines">
+				<a href="images.html"><div onmouseover="chbg('red')" onmouseout="chbk('red')"><div id="red" class="line" style="top:2.5vh"></div></div></a>
+				<div id="orange" class="line" style="transform:skewY(5deg);top:9vh"></div>
+				<a href="videos.html"><div onmouseover="chbg('gold')" onmouseout="chbk('gold')"><div id="gold" class="line" style="transform:skewY(10deg);top:16vh"></div></div></a>
+				<a href="audios.html"><div onmouseover="chbg('lime')" onmouseout="chbk('lime')"><div id="lime" class="line" style="transform:skewY(15deg);top:23vh"></div></div></a>
+				<div id="cyan" class="line" style="transform:skewY(20deg);top:30.5vh"></div>
+				<a href="text.html"><div onmouseover="chbg('blue')" onmouseout="chbk('blue')"><div id="blue" class="line" style="transform:skewY(25deg);top:38.5vh"></div></div></a>
+				<a href="links.html"><div onmouseover="chbg('purple')" onmouseout="chbk('purple')"><div id="purple" class="line" style="transform:skewY(30deg);top:47vh"></div></div></a>
+			</div>
+
+			<div class="nav-text">
+				<div id="see" onmouseover="chbg('red')" onmouseout="chbk('red')">
+					<a href="images.html"><h2>see</h2></a>
+				</div>
+				<h2 id="red_green">+</h2>
+				<div id="listen" onmouseover="chbg('lime')" onmouseout="chbk('lime')">
+					<a href="audios.html"><h2 style="margin-top:7vh">listen</h2></a>
+				</div>
+				<div id="read" onmouseover="chbg('blue')" onmouseout="chbk('blue')">
+					<a href="text.html"><h2 style="margin-top:22vh">read</h2></a>
+				</div>
+				<h2 id="red_blue">+</h2>
+			</div>
+				
+		</div>
+
+		<script>
+
+			function chbg(color) {
+				document.getElementById('title').style.color = color;
+				document.getElementById('title-line').style.background = color;
+				document.getElementById('page').style.color = color;
+				document.getElementById(color).style.background = color;
+				if (color == 'red') {
+					document.getElementById('see').style.color = color;
+					document.getElementById('page').innerHTML = 'images';
+				} else if (color == 'lime') {
+					document.getElementById('listen').style.color = color;
+					document.getElementById('page').innerHTML = 'audios';
+				} else if (color == 'blue') {
+					document.getElementById('read').style.color = color;
+					document.getElementById('page').innerHTML = 'texts';
+				} else if (color == 'gold') {
+					document.getElementById('red_green').style.visibility = 'visible';
+					document.getElementById('page').innerHTML = 'videos';
+				} else if (color == 'purple') {
+					document.getElementById('red_blue').style.visibility = 'visible';
+					document.getElementById('page').innerHTML = 'links';
+				} else if (color == 'black') {
+					document.getElementById('page').innerHTML = '<span style="color:red">a</span><span style="color:lime">l</span><span style="color:blue">l</span>';
+					document.getElementById('red').style.background = 'red';
+					document.getElementById('see').style.color = 'red';
+					document.getElementById('orange').style.background = 'orange';
+					document.getElementById('gold').style.background = 'gold';
+					document.getElementById('red_green').style.visibility = 'visible';
+					document.getElementById('lime').style.background = 'lime';
+					document.getElementById('listen').style.color = 'lime';
+					document.getElementById('cyan').style.background = 'cyan';
+					document.getElementById('blue').style.background = 'blue';
+					document.getElementById('read').style.color = 'blue';
+					document.getElementById('purple').style.background = 'purple';
+					document.getElementById('red_blue').style.visibility = 'visible';
+				} return;
+			}
+			function chbk(color) {
+				document.getElementById('title').style.color = 'black';
+				document.getElementById('title-line').style.background = 'black';
+				document.getElementById(color).style.background = 'black';
+				document.getElementById('red_green').style.visibility = 'hidden';
+				document.getElementById('red_blue').style.visibility = 'hidden';
+				document.getElementById('page').style.color = 'black';
+				document.getElementById('page').innerHTML = '<a href="https://www.are.na/krishangi-agarwal/krishangi-agarwal_archive" id="channel-url">are.na</a>';
+				if (color == 'red') {
+					document.getElementById('see').style.color = 'black';
+				} else if (color == 'lime') {
+					document.getElementById('listen').style.color = 'black';
+				} else if (color == 'blue') {
+					document.getElementById('read').style.color = 'black';
+				} else if (color == 'black') {
+					document.getElementById('red').style.background = color;
+					document.getElementById('see').style.color = color;
+					document.getElementById('orange').style.background = color;
+					document.getElementById('gold').style.background = color;
+					document.getElementById('lime').style.background = color;
+					document.getElementById('listen').style.color = color;
+					document.getElementById('cyan').style.background = color;
+					document.getElementById('blue').style.background = color;
+					document.getElementById('read').style.color = color;
+					document.getElementById('purple').style.background = color;
+				} return;
+			}  
+
+		</script>
+
+	</body>
+</html>

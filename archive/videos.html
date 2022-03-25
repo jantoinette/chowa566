@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="assets/reset.css" rel="stylesheet">
+		<link href="assets/style.css" rel="stylesheet">
+		<script src="assets/arena.js" type="text/javascript"></script>
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inter">
+		<link href="assets/videos.png" rel="icon">
+		<title>COLORS / red+green — videos</title>
+	</head>
+	<body>
+
+		<div class="header">
+			<a href="all.html"><div id="title" onmouseover="chbg('black')" onmouseout="chbk('black')" style="color:gold"><h1 class="all">COLORS</h1></div></a>
+			<div id="title-line" class="line" style="background:gold"></div>
+			
+			<a href="https://www.are.na/krishangi-agarwal/krishangi-agarwal_archive" id="channel-url"><h1 id="channel-title"></h1></a>
+			<div id="channel-description"></div>
+			<div id="black"></div>
+		</div>
+		<div class="footer" style="color:gold">
+			<div id="page">videos</div>
+			<div id="add"><a href="https://www.are.na/krishangi-agarwal/krishangi-agarwal_archive" id="channel-url" target="_blank">+ add blocks</a></div>
+		</div>
+
+		<div class="nav">
+			<div class="nav-lines">
+				<div id="red" class="line" style="top:2.5vh;background:red"></div></a>
+				<div class="line" style="transform:skewY(5deg);top:9vh"></div>
+				<div id="gold" class="line" style="transform:skewY(10deg);top:16vh;background:gold"></div>
+				<div id="lime" class="line" style="transform:skewY(15deg);top:23vh; background:lime"></div>
+				<div class="line" style="transform:skewY(20deg);top:30.5vh"></div>
+				<div id="blue" class="line" style="transform:skewY(25deg);top:38.5vh"></div>
+				<div id="purple" class="line" style="transform:skewY(30deg);top:47vh"></div>
+			</div>
+
+			<div class="nav-text">
+				<div id="see" style="color:red" onmouseover="chbg('lime')" onmouseout="chbk('red')">
+					<a href="audios.html"><h2>see</h2></a>
+				</div>
+				<h2 id="red_green" style="visibility:visible">+</h2>
+				<div id="listen" style="color:lime" onmouseover="chbg('red')" onmouseout="chbk('lime')">
+					<a href="images.html"><h2 style="margin-top:7vh">listen</h2></a>
+				</div>
+				<div id="read" onmouseover="chbg('blue')" onmouseout="chbk('blue')">
+					<a href="text.html"><h2 style="margin-top:22vh">read</h2></a>
+				</div>
+				<h2 id="red_blue">+</h2>
+			</div>
+				
+		</div>
+
+		<div class="container">
+
+			<section id="videos" class="video-embed-blocks video-file-blocks" style="border-color:gold"></section>
+
+			<!-- YouTube, Vimeo, etc. -->
+			<template id="video-embed-block">
+				<figure class="video-embed-block">
+					<!-- <h3 class="title"></h3> -->
+					<!-- <img class="image"> -->
+					<div class="embed"></div>
+					<a class="link"><p class="link-title"></p></a>
+					<figcaption class="description"></figcaption>
+					<!-- <p class="type"></p> -->
+				</figure>
+			</template>
+
+			<!-- Uploaded video files. -->
+			<template id="video-file-block">
+				<figure class="video-file-block">
+					<h3 class="title"></h3>
+					<!-- <img class="image"> -->
+					<video class="video" controls></video> <!-- Video source inserts here. -->
+					<figcaption class="description"></figcaption>
+					<!-- <p class="type"></p> -->
+				</figure>
+			</template>
+
+		</div>
+
+
+		<script>
+
+			function chbg(color) {
+				document.getElementById('title').style.color = color;
+				document.getElementById('title-line').style.background = color;
+				document.getElementById('page').style.color = color;
+				document.getElementById(color).style.background = color;
+				document.getElementById('red_green').style.visibility = 'hidden';
+				document.getElementById('gold').style.background = 'black';
+				if (color == 'black') {
+					document.getElementById('page').innerHTML = 'all';
+					document.getElementById('red_green').style.visibility = 'visible';
+					document.getElementById('gold').style.background = 'gold';
+					document.getElementById('read').style.color = 'blue';
+					document.getElementById('blue').style.background = 'blue';
+					document.getElementById('red_blue').style.visibility = 'visible';
+					document.getElementById('purple').style.background = 'purple';
+				} else if (color == 'lime') {
+					document.getElementById('page').innerHTML = 'audios';
+					document.getElementById('see').style.color = 'black';
+					document.getElementById('red').style.background = 'black';
+				} else if (color == 'red') {
+					document.getElementById('page').innerHTML = 'images';
+					document.getElementById('listen').style.color = 'black';
+					document.getElementById('lime').style.background = 'black';
+				} else if (color == 'blue') {
+					document.getElementById('page').innerHTML = 'texts + pdf';
+					document.getElementById('see').style.color = 'black';
+					document.getElementById('red').style.background = 'black';
+					document.getElementById('listen').style.color = 'black';
+					document.getElementById('lime').style.background = 'black';
+					document.getElementById('read').style.color = color;
+				} return;
+			}
+			function chbk(color) {
+				document.getElementById('title').style.color = 'gold';
+				document.getElementById('title-line').style.background = 'gold';
+				document.getElementById('page').style.color = 'gold';
+				document.getElementById('page').innerHTML = 'videos';
+				document.getElementById(color).style.background = color;
+				document.getElementById('red_green').style.visibility = 'visible';
+				document.getElementById('gold').style.background = 'gold';
+				if (color == 'black') {
+					document.getElementById('red_blue').style.visibility = 'hidden';
+					document.getElementById('purple').style.background = color;
+					document.getElementById('read').style.color = color;
+					document.getElementById('blue').style.background = color;
+				} else if (color == 'red') {
+					document.getElementById('see').style.color = color;
+				} else if (color == 'lime') {
+					document.getElementById('listen').style.color = color;
+				} else if (color == 'blue') {
+					document.getElementById('see').style.color = 'red';
+					document.getElementById('red').style.background = 'red';
+					document.getElementById('listen').style.color = 'lime';
+					document.getElementById('lime').style.background = 'lime';
+					document.getElementById('read').style.color = 'black';
+				} return;
+			}  
+
+		</script>
+
+	</body>
+</html>
