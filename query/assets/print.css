@@ -1,0 +1,160 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--serif: "BIZ UDPMincho", serif;
+	--sans: "BIZ UDPGothic", sans-serif;
+	--height: calc(100vh - 32px);
+	--width:  calc(100vw - 32px);
+	--column: calc(50% - 16px);
+}
+
+@page {
+	size: letter portrait;
+	margin: 20px 16px;
+}
+
+body {
+	font-family: var(--sans);
+	font-size: 9pt;
+	line-height: 16pt;
+	padding: 8px;
+}
+
+a:link {
+	color: black;
+	text-decoration: none;
+}
+
+/*.container a:after {content: " ("attr(href)")";}*/
+.intro-text p:after {content: "(https://mngyuan.com)";}
+
+.spacer, .line, .divider {display: none;}
+
+
+/* --- TITLE --- */
+
+.title {
+	font-size: 28.5pt;
+}
+
+.orient {
+	position: absolute;
+	display: block;
+	font-family: var(--serif);
+	background: none;
+	left: calc(50% + 16px);
+	/*padding-top: 3.5px;*/
+}
+
+.ation {
+	position: absolute;
+	display: block;
+	writing-mode: vertical-rl;
+	text-orientation: sideways-right;
+	bottom: 0;
+	right: 16px;
+}
+
+
+/* --- HEADER --- */
+
+.name {
+	font-size: 16pt;
+	line-height: 20pt;
+	font-family: var(--serif);
+	position: absolute;
+	left: calc(50% + 16px);
+	bottom: 0;
+	width: 25%;
+}
+.name a:before {content: "\a"; white-space: pre;}
+
+.topic {
+	font-size: 16pt;
+	font-family: var(--sans);
+	writing-mode: vertical-rl;
+	text-orientation: sideways-right;
+	margin: 0;
+	height: var(--height);
+	text-align: center;
+	display: block;
+	position: relative;
+}
+
+
+/* --- BODY --- */
+
+.container {
+	break-before: page;
+}
+
+.intro {
+	display: flex;
+	flex-direction: column;
+	height: calc(100vh - 8px);
+	justify-content: space-between;
+	page-break-after: always;
+}
+
+.intro-text {
+	display: block;
+	width: var(--column);
+}
+
+.pic {
+	height: auto;
+	width: var(--column);
+	display: block;
+	position: relative;
+	bottom: 0;
+	right: 0;
+	align-self: flex-end;
+}
+
+
+/* --- CONTENT --- */
+
+.transcript {
+	columns: 2;
+	column-gap: 32px;
+	hyphens: manual;
+	orphans: 3;
+	widows: 3;
+}
+
+[data-columns] {
+	display: none;
+}
+
+.block {
+	display: flex;
+	flex-direction: column;
+	align-items: baseline;
+	page-break-after: always;
+}
+
+.text {
+	display: block;
+	width: 100%;
+	padding-bottom: 16pt;
+}
+
+.text h6 {
+	text-transform: uppercase;
+	font-weight: normal;
+}
+
+
+/* --- ORIGINAL CSS --- */
+
+span {
+	font-family: var(--serif);
+}
+
+.blur {
+	font-family: var(--sans);
+	filter: 0;
+}
