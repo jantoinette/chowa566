@@ -32,6 +32,7 @@ span {
 
 a {color: var(--highlight);}
 a:hover {color: gold;}
+/*.container a {font-family: var(--serif);}*/
 
 ::selection {background: gold;}
 ::-moz-selection {background: gold;}
@@ -198,23 +199,7 @@ a:hover {color: gold;}
 .footer {
 	scroll-snap-align: start;
 	font-size: 0.75em;
+	padding-bottom: 20px;
 }
 
-/* --- SLIDE ANIMATION --- */
-
-.slideUp {
-  animation-name: slideUp;
-  animation-duration: 1s;
-  visibility: visible;
-}
-
-@keyframes slideUp {
-  0% {
-    opacity: 0;
-    transform: translateY(70%);
-  } 
-  100% {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-}
+.link {display: none;}

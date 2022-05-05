@@ -21,6 +21,8 @@ body {
 	font-size: 9pt;
 	line-height: 16pt;
 	padding: 8px;
+	height:100vh; 
+  overflow: hidden;
 }
 
 a:link {
@@ -32,6 +34,15 @@ a:link {
 .intro-text p:after {content: "(https://mngyuan.com)";}
 
 .spacer, .line, .divider {display: none;}
+
+span {
+	font-family: var(--serif);
+}
+
+.blur {
+	font-family: var(--sans);
+	filter: 0;
+}
 
 
 /* --- TITLE --- */
@@ -124,8 +135,11 @@ a:link {
 	orphans: 3;
 	widows: 3;
 }
+.trancript:last-child {
+	page-break-after: avoid;
+}
 
-[data-columns] {
+.col {
 	display: none;
 }
 
@@ -147,14 +161,5 @@ a:link {
 	font-weight: normal;
 }
 
-
-/* --- ORIGINAL CSS --- */
-
-span {
-	font-family: var(--serif);
-}
-
-.blur {
-	font-family: var(--sans);
-	filter: 0;
-}
+.footer span:before {content: "\a"; white-space: pre;}
+.link {display: block;}
